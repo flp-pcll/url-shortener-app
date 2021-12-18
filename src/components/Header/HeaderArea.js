@@ -18,7 +18,7 @@ function Header() {
     return (
         <header>
             <nav className={styles['top-navigation_container']}>
-                <section id="logoArea" title="Shortly Logo Area">
+                <section className={styles['logo-area']} id="logoArea" title="Shortly Logo Area">
                     <LogoArea />
                 </section>
                 <section className={styles['nav-content']} title="Shortly Navigation Links">

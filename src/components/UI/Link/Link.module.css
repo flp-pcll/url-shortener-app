@@ -5,10 +5,9 @@
     color: var(--very-grayish-violet);
 }
 
-.link:active {
-    color: var(--very-grayish-violet);
-}
-
 .link:hover {
     color: var(--very-dark-blue);
+}
+.link:active {
+    color: var(--very-grayish-violet);
 }

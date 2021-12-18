@@ -11,7 +11,7 @@ function NavActions() {
                 <Link href="/"> Login </Link>
             </li>
             <li title="Sign up button">
-                <Button>Sign Up</Button>
+                <Button isPrimary={true}>Sign Up</Button>
             </li>
         </ul>
     );
