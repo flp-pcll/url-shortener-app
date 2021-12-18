@@ -20,7 +20,7 @@ function Header() {
         <header>
             <nav className={styles['top-navigation_container']}>
                 <section className={styles['logo-area']} id="logoArea" title="Shortly Logo Area">
-                    <LogoArea />
+                    <LogoArea href="/" />
                 </section>
                 <section className={styles['nav-content']} title="Shortly Navigation Links">
                     {windowWidth > 1000 && 
