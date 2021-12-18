@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,500;1,700&display=swap');
+
+:root {
+    /*Typgraphy:*/
+    --body-font: 'Poppins', sans-serif;
+    --default-font-size: 180px;
+
+
+
+    /*Primary:*/
+    --cyan: hsl(180, 66%, 49%); /*buttons*/
+    --dark-violet: hsl(257, 27%, 26%); /*shorten form bg, stats icons bg*/
+    --white: hsl(360, 100%, 100%); 
+
+
+    /*Secondary:*/
+    --red: hsl(0, 87%, 67%); /*error message*/
+
+    /*Neutral:*/
+    --gray: hsl(0, 0%, 75%); /*???*/
+    --very-grayish-violet: hsl(257, 7%, 63%); /*paragraphs, initial links color*/
+    --very-dark-blue: hsl(255, 11%, 22%); /*headings, link hovers, h1-h6*/
+    --very-dark-violet: hsl(260, 8%, 14%); /*footer bg*/
+}

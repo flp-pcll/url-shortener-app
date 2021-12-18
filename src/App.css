@@ -1,0 +1,6 @@
+@import url('./assets/styles/variables.css');
+
+body {
+    font-family: var(--body-font);
+    font-size: 18px;
+}

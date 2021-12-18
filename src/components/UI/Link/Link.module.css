@@ -1,0 +1,14 @@
+@import url('../../../assets/styles/variables.css');
+
+.link {
+    background-color: transparent;
+    color: var(--very-grayish-violet);
+}
+
+.link:active {
+    color: var(--very-grayish-violet);
+}
+
+.link:hover {
+    color: var(--very-dark-blue);
+}

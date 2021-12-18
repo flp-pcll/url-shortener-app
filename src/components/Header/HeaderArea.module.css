@@ -1,0 +1,17 @@
+header {
+    display: block;
+    /* margin: 2rem 4rem; */
+}
+
+.top-navigation_container {
+    display: flex;
+    align-content: center;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-grow: 1;
+}
+

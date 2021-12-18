@@ -1,0 +1,8 @@
+@import url('../../../assets/styles/variables.css');
+
+.button {
+    display: block;
+    background-color: var(--cyan);
+    color: var(--white);
+    padding: .5rem;
+}
