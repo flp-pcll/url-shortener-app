@@ -1,7 +1,7 @@
 import React from "react";
 import { GoThreeBars } from "react-icons/go";
 import Button from "../../UI/Button/Button";
-import styles from "./Burger.module.css";
+import styles from "./MobileMenuIcon.module.css";
 
 function Burger(props) {
     return (

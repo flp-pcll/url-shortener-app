@@ -3,7 +3,7 @@ import styles from "./HeaderArea.module.css";
 import LogoArea from "./LogoArea/LogoArea";
 import NavActions from "./NavActions/NavActions";
 import NavLinks from "./NavLinks/NavLinks";
-import Burger from "./MobileMenuIcon/Burger";
+import MobileMenuIcon from "./MobileMenuIcon/MobileMenuIcon";
 
 function Header() {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -29,7 +29,7 @@ function Header() {
                         <NavActions />
                     </React.Fragment>}
 
-                    {windowWidth < 1000 && <Burger />}
+                    {windowWidth < 1000 && <MobileMenuIcon />}
                 </section>
             </nav>
         </header>
