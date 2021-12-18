@@ -1,18 +1,15 @@
 import React, { useState } from "react";
-import { GoThreeBars } from "react-icons/go";
-import { GoX } from "react-icons/go";
+import { GoThreeBars, GoX } from "react-icons/go";
 import Button from "../../UI/Button/Button";
 import styles from "./MobileMenuIcon.module.css";
 
-function Burger(props) {
+function MobileMenuIcon(props) {
     const [menuIsClicked, setMenuIsClicked] = useState(() => false);
 
     const iconClickHandler = event => {
         event.preventDefault();
         setMenuIsClicked(prevState => !prevState);
     };
-
-    console.log(menuIsClicked);
 
     return (
         <div onClick={iconClickHandler} className={`${styles['mobile-btn_container']} ${props.className}`}>
@@ -24,4 +21,4 @@ function Burger(props) {
     );
 };
 
-export default Burger;
+export default MobileMenuIcon;
