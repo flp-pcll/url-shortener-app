@@ -3,6 +3,7 @@ import styles from "./HeaderArea.module.css";
 import LogoArea from "./LogoArea/LogoArea";
 import NavActions from "./NavActions/NavActions";
 import NavLinks from "./NavLinks/NavLinks";
+import Burger from "./MobileMenuIcon/Burger";
 
 function Header() {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -22,8 +23,13 @@ function Header() {
                     <LogoArea />
                 </section>
                 <section className={styles['nav-content']} title="Shortly Navigation Links">
-                    <NavLinks />
-                    <NavActions />
+                    {windowWidth > 1000 && 
+                    <React.Fragment>
+                        <NavLinks />
+                        <NavActions />
+                    </React.Fragment>}
+
+                    {windowWidth < 1000 && <Burger />}
                 </section>
             </nav>
         </header>

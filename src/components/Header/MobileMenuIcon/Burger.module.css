@@ -1,0 +1,25 @@
+@import url('../../../assets/styles/variables.css');
+
+.mobile-btn_container {
+    align-self: flex-end;
+    flex-grow: 0;
+}
+
+.mobile-icon_btn {
+    cursor: pointer;
+    background-color: transparent;
+    padding: 0;
+}
+
+.burger-icon {
+    font-size: 2rem;
+    fill: var(--very-dark-blue);
+}
+
+.mobile-icon_btn:hover {
+    background-color: transparent;
+}
+
+.mobile-icon_btn:active {
+    fill: var(--very-grayish-violet);
+}
