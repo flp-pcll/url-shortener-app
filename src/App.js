@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./components/Header/HeaderArea";
 import MainFlex from "./components/Layout/MainFlex";
 import HeroArea from "./components/HeroArea/HeroArea";
+import ShortenerArea from "./components/ShortenerArea/ShortenerArea";
 
 import "./App.css";
 
@@ -11,7 +12,7 @@ function App() {
             <Header />
             <MainFlex>
                 <HeroArea />
-                {/* {ShortenerArea} */}
+                <ShortenerArea />
                 {/* {Stats} */}
             </MainFlex>
         </div>
