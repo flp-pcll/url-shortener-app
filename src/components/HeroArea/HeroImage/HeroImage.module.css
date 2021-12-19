@@ -1,0 +1,8 @@
+.hero-img-area {
+    min-width: 50%;
+}
+
+.hero-img-area img {
+    width: 123%;
+    height: auto;
+}
