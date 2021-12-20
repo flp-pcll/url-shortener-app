@@ -5,6 +5,7 @@ function Input(props) {
     return (
         <input
             className={`${styles['input']} ${props.className}`}
+            ref={props.inputref}
             type={props.type}
             id={props.id}
             aria-label={props.ariaLabel}

@@ -5,6 +5,6 @@
 }
 
 .input:focus {
-    border: 2px solid red;
+    border: 2px solid var(--very-grayish-violet);
 }
 
