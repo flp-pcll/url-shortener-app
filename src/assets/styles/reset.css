@@ -24,3 +24,8 @@ button {
 svg, img {
     display: block;
 }
+
+fieldset, input {
+    border: none;
+    font: inherit;
+}

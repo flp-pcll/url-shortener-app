@@ -1,0 +1,32 @@
+@import url('../../../assets/styles/variables.css');
+
+.shortener-form_card {
+    background-color: var(--dark-violet);
+    background-image: url('../../../assets/images/bg-shorten-desktop.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 10rem;
+    border: none;
+    display: flex;
+    align-content: center;
+}
+
+.shortener-form_container {
+    flex-basis: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin: 0 2rem;
+}
+
+.shortener-form_controls {
+    flex-grow: 1;
+    height: 40px;
+    margin: 0 1rem 0 0;
+}
+
+.shortener-form_actions {
+    margin-left: 1rem;
+}

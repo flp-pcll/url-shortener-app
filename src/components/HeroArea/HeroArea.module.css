@@ -5,7 +5,7 @@
     position: relative;
     left: 4rem;
     overflow: hidden;
-    margin: 1.5rem 0 0 0;
+    margin: 2rem 0 2rem 0;
 }
 
 @media screen and (max-width: 1000px) {
