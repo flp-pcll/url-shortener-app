@@ -6,7 +6,7 @@ import Card from "../../UI/Card/Card";
 
 import styles from "./ShortenerForm.module.css";
 
-function ShortenerForm() {
+function ShortenerForm({onHttpRequest}) {
     const inputRef = useRef(null);
     const [isInputValid, setIsInputValid] = useState(false);
 
@@ -22,18 +22,22 @@ function ShortenerForm() {
         if (!isInputValid) return;
 
         const url = `https://api.shrtco.de/v2/shorten?url=${inputRef.current.value}`;
-        const getDataRequest = async (url) => {
+        const getShortenedLink = async (url) => {
             try {
-                const getShortenedLink = await axios.get(url);
-                console.log(getShortenedLink.data.result);
+                const request = await axios.get(url);
+                onHttpRequest({
+                    id: request.data.result.code,
+                    originalURL: request.data.result.original_link,
+                    shortenedURL: request.data.result.short_link
+                });
                 setIsInputValid(false);
                 inputRef.current.value = null;
             } catch(err) {
                 console.log(err);
             };
         };
-        getDataRequest(url);
-    }, [isInputValid]);
+        getShortenedLink(url);
+    }, [isInputValid, onHttpRequest]);
 
     return (
         <Card className={styles['shortener-form_card']}>

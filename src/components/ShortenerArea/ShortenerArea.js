@@ -2,9 +2,11 @@ import React from "react";
 import ShortenerForm from "./ShortenerForm/ShortenerForm";
 
 function ShortenerArea() {
+    const getLinkObjectHandler = (linkObj) => console.log(linkObj);
+
     return(
         <section>
-            <ShortenerForm />
+            <ShortenerForm onHttpRequest={getLinkObjectHandler} />
             <div>List</div>
         </section>
     );
