@@ -3,30 +3,36 @@
 .shortener-form_card {
     background-color: var(--dark-violet);
     background-image: url('../../../assets/images/bg-shorten-desktop.svg');
-    background-position: center;
-    background-size: cover;
     background-repeat: no-repeat;
-    height: 10rem;
-    border: none;
-    display: flex;
-    align-content: center;
+    background-size: cover;
+    background-position: top left;
+
+    margin: 0 4rem;
 }
 
-.shortener-form_container {
-    flex-basis: 100%;
+.shortener-form {
+    height: 10rem;
+    margin: 0 2rem;
+
     display: flex;
     align-items: center;
-    align-content: center;
-    justify-content: center;
-    margin: 0 2rem;
 }
 
-.shortener-form_controls {
+.shortener-form_form-controls {
     flex-grow: 1;
-    height: 40px;
-    margin: 0 1rem 0 0;
+    height: 50px;
+    margin-right: 1rem;
+}
+.shortener-form_form-controls input {
+    height: 100%;
+    width: 100%;
+    font-size: 1.2rem;
 }
 
-.shortener-form_actions {
-    margin-left: 1rem;
+.shortener-form_form-actions {
+    height: 50px;
 }
+.shortener-form_form-actions button {
+    height: 100%;
+}
+

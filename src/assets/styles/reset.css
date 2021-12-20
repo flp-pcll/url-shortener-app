@@ -28,4 +28,6 @@ svg, img {
 fieldset, input {
     border: none;
     font: inherit;
+    box-sizing: border-box;
+    outline: none;
 }
