@@ -1,4 +1,5 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import axios from "axios";
 import Button from "../../UI/Button/Button";
 import Input from "../../UI/Input/Input";
 import Card from "../../UI/Card/Card";
@@ -7,23 +8,39 @@ import styles from "./ShortenerForm.module.css";
 
 function ShortenerForm() {
     const inputRef = useRef(null);
-    const [error, setError] = useState(false);
+    const [isInputValid, setIsInputValid] = useState(false);
 
+    //validation:
     const formSubmitHandler = event => {
         event.preventDefault();
         const exp = new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%.\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%\+.~#?&\\=]*)/gm);
+        exp.test(inputRef.current.value) ? setIsInputValid(true) : window.alert('Please add a valid link...');
     };
 
-    console.log(error);
+    //http request:
+    useEffect(() => {
+        if (!isInputValid) return;
 
-
+        const url = `https://api.shrtco.de/v2/shorten?url=${inputRef.current.value}`;
+        const getDataRequest = async (url) => {
+            try {
+                const getShortenedLink = await axios.get(url);
+                console.log(getShortenedLink.data.result);
+                setIsInputValid(false);
+                inputRef.current.value = null;
+            } catch(err) {
+                console.log(err);
+            };
+        };
+        getDataRequest(url);
+    }, [isInputValid]);
 
     return (
         <Card className={styles['shortener-form_card']}>
             <form onSubmit={formSubmitHandler} className={styles['shortener-form']} id="shortenerForm" noValidate autoComplete="off">
                 <fieldset className={styles['shortener-form_form-controls']} name="Form Controls">
                     <Input inputref={inputRef} type="text" ariaLabel="Add a link here" placeholder="Shorten a Link here..." />
-                    <small style={{display: 'none'}} title="Error Message">Please add a valid link...</small>
+                    <small style={{ display: 'none' }} title="Error Message">Please add a valid link...</small>
                 </fieldset>
                 <fieldset className={styles['shortener-form_form-actions']} name="Form Actions">
                     <Button type="submit" >Shorten it!</Button>
