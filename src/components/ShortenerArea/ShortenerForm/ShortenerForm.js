@@ -11,6 +11,12 @@ function ShortenerForm({onHttpRequest}) {
     const inputRef = useRef(null);
     const [isInputValid, setIsInputValid] = useState(false);
     const [dataIsLoading, setDataIsLoading] = useState(false);
+    const [errorAlert, setErrorAlert] = useState(false);
+
+    const inputClickHandler = event => {
+        event.preventDefault();
+        setErrorAlert(false);
+    };
 
     //validation:
     const formSubmitHandler = event => {
@@ -20,7 +26,8 @@ function ShortenerForm({onHttpRequest}) {
             setIsInputValid(true);
             setDataIsLoading(true);
         } else {
-            window.alert('Please enter a valid link...');
+            console.log('invalid input text');
+            setErrorAlert(true);
         };
     };
 
@@ -37,7 +44,6 @@ function ShortenerForm({onHttpRequest}) {
                     originalURL: request.data.result.original_link,
                     shortenedURL: request.data.result.short_link
                 });
-                setIsInputValid(false);
                 inputRef.current.value = null;
                 setDataIsLoading(false);
             } catch(err) {
@@ -45,14 +51,15 @@ function ShortenerForm({onHttpRequest}) {
             };
         };
         getShortenedLink(url);
+        setIsInputValid(false);
     }, [isInputValid, onHttpRequest]);
 
     return (
         <Card className={styles['shortener-form_card']}>
             <form onSubmit={formSubmitHandler} className={styles['shortener-form']} id="shortenerForm" noValidate autoComplete="off">
                 <fieldset className={styles['shortener-form_form-controls']} name="Form Controls">
-                    <Input inputref={inputRef} type="text" ariaLabel="Add a link here" placeholder="Shorten a Link here..." />
-                    <small style={{ display: 'none' }} title="Error Message">Please add a valid link...</small>
+                    <Input className={`${errorAlert ? styles['input-on-error'] : ""}`} inputref={inputRef} type="text" ariaLabel="Add a link here" placeholder="Shorten a Link here..." onClick={inputClickHandler} />
+                    <small className={`${errorAlert ? styles['error-message_alert'] : styles['error-message_disabled']}`} title="Error Message">Please add a valid link...</small>
                 </fieldset>
                 <fieldset className={styles['shortener-form_form-actions']} name="Form Actions">
                     <Button type="submit">

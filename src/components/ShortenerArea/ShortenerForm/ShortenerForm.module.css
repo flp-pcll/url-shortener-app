@@ -47,6 +47,47 @@
 .shortener-form_form-actions button div {
     text-align: center;
     align-self: flex-end;
+}
 
+.input-on-error {
+    border: 2px solid var(--red);
+}
+
+.error-message_disabled {
+    color: var(--red);
+    font-style: italic;
+    display: none;
+}
+.error-message_alert {
+    display: block;
+    color: var(--red);
+}
+
+@media screen and (max-width: 1000px) {
+    .shortener-form_card {
+        background-image: url('../../../assets/images/bg-shorten-mobile.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .shortener-form {
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 0 1.5rem;
+        padding: 1.5rem 0;
+    }
+    .shortener-form_form-controls {
+        margin: 0;
+        width: 100%;
+        flex-grow: 0;
+    }
+
+    .shortener-form_form-actions {
+        width: 100%;
+    }
+    .shortener-form_form-actions button {
+        width: 100%;
+    }
 }
 

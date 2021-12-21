@@ -1,0 +1,5 @@
+@import url('../../assets/styles/variables.css');
+
+.shortener-area {
+    background-color: var(--main-area-gray);
+}

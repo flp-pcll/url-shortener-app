@@ -17,8 +17,8 @@
     --red: hsl(0, 87%, 67%); /*error message*/
 
     /*Neutral:*/
-    --main-bg-color: hsl(225, 33%, 95%);
     --gray: hsl(0, 0%, 75%); /*???*/
+    --main-area-gray: hsl(225, 33%, 95%); /*main area gray bg*/
     --very-grayish-violet: hsl(257, 7%, 63%); /*paragraphs, initial links color*/
     --very-dark-blue: hsl(255, 11%, 22%); /*headings, link hovers, h1-h6*/
     --very-dark-violet: hsl(260, 8%, 14%); /*footer bg*/
