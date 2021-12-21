@@ -46,8 +46,10 @@ function ShortenerForm({onHttpRequest}) {
                 });
                 inputRef.current.value = null;
                 setDataIsLoading(false);
-            } catch(err) {
-                console.log(err);
+            } catch(error) {
+                setDataIsLoading(false);
+                //Open error on request in a modal!
+                window.alert(`oops. Something went wrong! ${error.response.status}: ${error.response.statusText}`);
             };
         };
         getShortenedLink(url);
