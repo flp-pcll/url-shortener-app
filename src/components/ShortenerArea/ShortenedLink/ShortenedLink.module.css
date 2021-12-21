@@ -1,0 +1,32 @@
+@import url('../../../assets/styles/variables.css');
+.shortened-link_container {
+    height: 80px;
+    margin: .8rem 0;
+}
+.shortened-link_container--card {
+    background-color: var(--white);
+    height: 100%;
+    padding: 0 1rem;
+
+    display: flex;
+    align-items: center;
+}
+
+.shortened-link_links-area {
+    flex-grow: 1;
+
+    display: flex;
+}
+
+.shortened-link-area {
+    text-align: right;
+    flex-grow: 1;
+}
+
+.shortened-link_controls-area {
+    width: 110px;
+    margin: 0 0 0 1rem;
+}
+.shortened-link_controls-area button {
+    width: 100%;
+}

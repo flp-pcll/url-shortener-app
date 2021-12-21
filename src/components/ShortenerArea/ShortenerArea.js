@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ShortenerForm from "./ShortenerForm/ShortenerForm";
 import styles from "./ShortenerArea.module.css";
+import ShortenedLinksList from "./ShortenedLinksList/ShortenedLinksList";
 
 function ShortenerArea() {
     const [shortenedLinkItems, setShortenedLinkItems] = useState(() => {
@@ -24,7 +25,7 @@ function ShortenerArea() {
     return(
         <section className={styles['shortener-area']}>
             <ShortenerForm onHttpRequest={getLinkObjectHandler} />
-            <div>List</div>
+            <ShortenedLinksList linksList={shortenedLinkItems} />
         </section>
     );
 };
