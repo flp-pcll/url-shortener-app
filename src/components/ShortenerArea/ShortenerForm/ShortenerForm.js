@@ -5,16 +5,23 @@ import Input from "../../UI/Input/Input";
 import Card from "../../UI/Card/Card";
 
 import styles from "./ShortenerForm.module.css";
+import Spinner from "../../UI/Spinner/Spinner";
 
 function ShortenerForm({onHttpRequest}) {
     const inputRef = useRef(null);
     const [isInputValid, setIsInputValid] = useState(false);
+    const [dataIsLoading, setDataIsLoading] = useState(false);
 
     //validation:
     const formSubmitHandler = event => {
         event.preventDefault();
         const exp = new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%.+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%\+.~#?&\\=]*)/gm);
-        exp.test(inputRef.current.value) ? setIsInputValid(true) : window.alert('Please add a valid link...');
+        if(exp.test(inputRef.current.value)) {
+            setIsInputValid(true);
+            setDataIsLoading(true);
+        } else {
+            window.alert('Please enter a valid link...');
+        };
     };
 
     //http request:
@@ -32,6 +39,7 @@ function ShortenerForm({onHttpRequest}) {
                 });
                 setIsInputValid(false);
                 inputRef.current.value = null;
+                setDataIsLoading(false);
             } catch(err) {
                 console.log(err);
             };
@@ -47,7 +55,9 @@ function ShortenerForm({onHttpRequest}) {
                     <small style={{ display: 'none' }} title="Error Message">Please add a valid link...</small>
                 </fieldset>
                 <fieldset className={styles['shortener-form_form-actions']} name="Form Actions">
-                    <Button type="submit" >Shorten it!</Button>
+                    <Button type="submit">
+                        {dataIsLoading ? <Spinner /> : "Shorten It!"}
+                    </Button>
                 </fieldset>
             </form>
         </Card>
