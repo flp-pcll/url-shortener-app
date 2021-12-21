@@ -13,7 +13,7 @@ function ShortenerForm({onHttpRequest}) {
     //validation:
     const formSubmitHandler = event => {
         event.preventDefault();
-        const exp = new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%.\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%\+.~#?&\\=]*)/gm);
+        const exp = new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%.+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%\+.~#?&\\=]*)/gm);
         exp.test(inputRef.current.value) ? setIsInputValid(true) : window.alert('Please add a valid link...');
     };
 

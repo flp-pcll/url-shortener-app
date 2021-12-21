@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useCallback } from "react";
 import ShortenerForm from "./ShortenerForm/ShortenerForm";
 
 function ShortenerArea() {
-    const getLinkObjectHandler = (linkObj) => console.log(linkObj);
+    const getLinkObjectHandler = linkObj => console.log(linkObj);
 
     return(
         <section>
