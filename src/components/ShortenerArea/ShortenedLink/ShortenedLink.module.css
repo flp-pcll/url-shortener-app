@@ -10,6 +10,8 @@
 
     display: flex;
     align-items: center;
+
+    box-shadow: .5px .5px 4px 2px hsla(0, 0%, 80%, .2);
 }
 
 .shortened-link_links-area {
@@ -21,6 +23,15 @@
 .shortened-link-area {
     text-align: right;
     flex-grow: 1;
+    color: var(--cyan);
+}
+.shortened-link-area p::selection {
+    background-color: var(--cyan);
+    color: var(--very-dark-blue);
+}
+
+.shortened-link__originalURL {
+    user-select: none;
 }
 
 .shortened-link_controls-area {
@@ -29,4 +40,46 @@
 }
 .shortened-link_controls-area button {
     width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+    .shortened-link_container {
+        height: 100%;
+    }
+    .shortened-link_container--card {
+        flex-direction: column;
+        align-items: flex-start;
+        overflow: hidden;
+        padding: 1rem 1.5rem;
+    }
+
+    .shortened-link_links-area {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 0 1rem 0;
+    }
+
+    .shortened-link-area {
+        margin: 1rem 0 .5rem 0;
+    }
+
+    .original-link_container {
+        display: block;
+        width: 100%;
+        position: relative;
+    }
+    .original-link_container::after {
+        content: "";
+        width: 500%;
+        left: -100px;
+        height: 1px;
+        position: absolute;
+        background-color: var(--gray);
+        margin: .5rem 0 0 0;
+    }
+
+    .shortened-link_controls-area {
+        margin: 0;
+        width: 100%;
+    }    
 }
