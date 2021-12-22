@@ -12,6 +12,8 @@
     .hero-area {
         flex-direction: column-reverse;
         left: 0;
+        text-align: center;
+        /* margin: 0 2rem; */
     }
 
     .hero-area img {

@@ -29,3 +29,17 @@
     height: 100%;
     border-radius: 100px;
 }
+
+@media screen and (max-width: 1000px) {
+    .hero-text_container {
+        margin: 2rem 4rem;
+    }
+    .hero-text_container p {
+        margin: 0 4rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-text_container__control button {
+        width: 50%;
+    }
+}
