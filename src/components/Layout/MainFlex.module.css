@@ -1,4 +1,5 @@
 .main-flex {
     overflow: hidden;
     width: 100%;
+    background-color: var(--main-area-gray);
 }
