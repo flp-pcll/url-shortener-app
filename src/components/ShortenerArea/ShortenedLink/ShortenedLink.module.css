@@ -40,6 +40,21 @@
 }
 .shortened-link_controls-area button {
     width: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.shortened-link_controls-area button.copied-content {
+    background-color: var(--dark-violet);
+    cursor: default;
+}
+
+.shortened-link_controls-area .spinner {
+    height: 20px;
+    position: relative;
+    bottom: 15px;
 }
 
 @media screen and (max-width: 1000px) {

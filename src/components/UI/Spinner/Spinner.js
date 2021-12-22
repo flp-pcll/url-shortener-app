@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./Spinner.module.css";
 
-function Spinner() {
+function Spinner(props) {
     return(
-        <div className={styles['lds-ring']}><div></div><div></div><div></div><div></div></div>
+        <div className={`${styles['lds-ring']} ${props.className}`}><div></div><div></div><div></div><div></div></div>
     );
 };
 
