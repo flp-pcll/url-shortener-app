@@ -23,6 +23,7 @@ function ShortenedLink(props) {
     }, [props.shortenedURL]);
 
     useEffect(() => {
+        if(!copyURL) return;
         copyURLToClipboard();
     }, [copyURLToClipboard, copyURL]);
 
