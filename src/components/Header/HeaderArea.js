@@ -17,7 +17,7 @@ function Header() {
 
     console.log(windowWidth);
     return (
-        <header>
+        <header className={styles['page-header_area']}>
             <nav className={styles['top-navigation_container']}>
                 <section className={styles['logo-area']} id="logoArea" title="Shortly Logo Area">
                     <LogoArea href="/" />

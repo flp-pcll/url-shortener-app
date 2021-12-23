@@ -1,9 +1,10 @@
 import React from "react";
+import StatsHeader from "./StatsHeader/StatsHeader";
 import StatsCardsList from "./StatsCardsList/StatsCardsList";
 import { ReactComponent as BrandRecognitionIcon } from "../../assets/images/icon-brand-recognition.svg";
 import { ReactComponent as DetailedRecordsIcon } from "../../assets/images/icon-detailed-records.svg";
 import { ReactComponent as FullyCustomizable } from "../../assets/images/icon-fully-customizable.svg";
-import StatsHeader from "./StatsHeader/StatsHeader";
+import styles from "./StatsArea.module.css";
 
 function StatsArea() {
     const cardsItems = [
@@ -28,9 +29,9 @@ function StatsArea() {
     ];
 
     return(
-        <section>
+        <section className={styles['stats-cards_area']}>
             <StatsHeader />
-            <StatsCardsList cards={cardsItems} />
+            <StatsCardsList cardsInfo={cardsItems} />
         </section>
     );
 };

@@ -1,6 +1,7 @@
 import React from "react";
 
-function StatsCardsList() {
+function StatsCardsList({cardsInfo}) {
+    console.log(cardsInfo);
     return(
         <ul>Lista</ul>
     );

@@ -6,9 +6,11 @@ import styles from "./HeroArea.module.css";
 
 function HeroArea() {
     return (
-        <section className={styles['hero-area']}>
-            <HeroText />
-            <HeroImage />
+        <section className={styles['hero-area_section']}>
+            <article className={styles['hero-area']}>
+                <HeroText />
+                <HeroImage />
+            </article>
         </section>
     );
 };

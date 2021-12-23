@@ -1,3 +1,7 @@
+@import url('../../assets/styles/variables.css');
+.hero-area_section {
+    overflow: hidden;
+}
 .hero-area {
     display: flex;
     align-content: center;

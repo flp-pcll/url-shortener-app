@@ -1,6 +1,5 @@
 @import url('../../assets/styles/variables.css');
-.main-flex {
-    overflow: hidden;
-    width: 100%;
+
+.stats-cards_area {
     background-color: var(--main-area-gray);
 }
