@@ -32,6 +32,7 @@
 
 .shortened-link__originalURL {
     user-select: none;
+    color: var(--very-dark-blue);
 }
 
 .shortened-link_controls-area {
