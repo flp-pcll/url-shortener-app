@@ -2,4 +2,12 @@
 
 .stats-cards_area {
     background-color: var(--main-area-gray);
+    text-align: center;
+    margin-top: 4rem;
+}
+
+@media screen and (max-width: 1000px) {
+    .stats-cards_area {
+        height: auto;
+    }
 }

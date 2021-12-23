@@ -1,0 +1,51 @@
+@import url('../../../assets/styles/variables.css');
+
+.stats-card {
+    background-color: var(--white);
+    text-align: left;
+    max-width: 340px;
+    position: relative;
+    display: block;
+    padding: 2rem .5rem;
+    box-shadow: .5px .5px 4px 2px hsla(0, 0%, 80%, .2);
+}
+
+.stats-card_icon {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: var(--dark-violet);
+    border-radius: 50%;
+    padding: .7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -35px;
+    left: 1.5rem;
+}
+.stats-card_icon svg {
+    display: block;
+    align-self: center;
+}
+
+.stats-card_text-area {
+    display: block;
+    margin: 1rem 1rem 0 1rem;
+    padding: .5rem;
+}
+
+.stats-card_text-area header {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: var(--very-dark-blue);
+}
+.stats-card_text-area p {
+    line-height: 1.8;
+    font-size: .98rem;
+    /* text-justify:distribute-all-lines; */
+    color: var(--very-grayish-violet);
+}
+
+
+

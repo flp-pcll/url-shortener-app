@@ -1,0 +1,21 @@
+.stats-cards_list-area {
+    display: flex;
+    justify-content: space-between;
+    margin: 4rem 4rem 3rem 4rem;
+    height: 100%;
+}
+
+.stats-cards_list-area li:nth-child(1) {
+    /* background-color: red; */
+    margin-top: 0;
+}
+.stats-cards_list-area li:nth-child(2) {
+    /* background-color: green; */
+    /* margin-top: 4rem; */
+    margin-top: calc(72.4px / 2);
+}
+
+.stats-cards_list-area li:nth-child(3) {
+    /* background-color: magenta; */
+    margin-top: 72.4px;
+}
