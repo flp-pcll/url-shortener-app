@@ -6,6 +6,7 @@ import ShortenerArea from "./components/ShortenerArea/ShortenerArea";
 import StatsArea from "./components/StatsArea/StatsArea";
 
 import "./App.css";
+import Footer from "./components/Footer/Footer";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                 <ShortenerArea />
                 <StatsArea />
             </MainFlex>
+            <Footer />
         </div>
     );
 };
