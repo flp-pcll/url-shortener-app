@@ -27,7 +27,6 @@
     flex-grow: 1;
     display: flex;
     justify-content: space-around;
-    /* align-self: center; */
 }
 
 .footer-nav_container ul:nth-child(1) {
