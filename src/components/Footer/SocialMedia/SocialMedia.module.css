@@ -1,0 +1,22 @@
+@import url('../../../assets/styles/variables.css');
+
+.social-media_items {
+    display: flex;
+    /* justify-content: space-between; */
+    font-size: 1.8rem;
+    color: var(--white);
+    align-content: flex-end;
+
+}
+.social-media_items li {
+    align-self: flex-start;
+    margin-left: 2rem;
+}
+
+.social-media_items li:nth-child(4) {
+    margin-right: 0;
+}
+.social-media_items a svg{
+    fill: var(--white);
+}
+

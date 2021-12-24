@@ -1,19 +1,13 @@
 import React from "react";
 import FooterCTA from "./FooterCTA/FooterCTA";
+import FooterNav from "./FooterNav/FooterNav";
+import styles from "./Footer.module.css";
 
 function Footer() {
     return(
-        <footer>
+        <footer className={styles['footer-wrapper']}>
                 <FooterCTA />
-                <section>
-                    <nav>
-                        <div>Logo</div>
-                        <ul></ul>
-                        <ul></ul>
-                        <ul></ul>
-                        <ul></ul>
-                    </nav>
-                </section>
+                <FooterNav />
         </footer>
     );
 };

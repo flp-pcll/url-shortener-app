@@ -21,6 +21,9 @@
     align-content: center;
     justify-content: center;
 }
+.logo-area svg {
+    fill: var(--very-dark-blue);
+}
 
 @media screen and (max-width: 1000px) {
     .logo-area {

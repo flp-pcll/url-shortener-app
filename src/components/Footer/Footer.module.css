@@ -1,0 +1,14 @@
+.footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.footer-wrapper header {
+    flex-basis: 40%;
+}
+
+.footer-wrapper nav {
+    background-color: var(--very-dark-violet);
+    flex-basis: 60%;
+}
