@@ -1,11 +1,11 @@
 @import url('../../../assets/styles/variables.css');
 .footer-nav-links_list {
     color: var(--white) ;
+    vertical-align: top;
 }
 
 .footer-nav-links_list li:nth-child(1) {
     color: var(--white);
-    margin: 0 0 1rem 0;
     font-weight: 700;
 }
 .footer-nav-links_list li:nth-child(1) a {
@@ -13,7 +13,6 @@
 }
 
 .footer-nav-links_list :not(li:nth-child(1)) {
-    margin-bottom: .5rem;
     font-weight: 500;
 }
 

@@ -1,4 +1,4 @@
-@import url('../../../assets/styles/variables.css');
+/* @import url('../../../assets/styles/variables.css');
 .footer-flex {
     background-color: var(--very-dark-violet);
     display: flex;
@@ -39,4 +39,39 @@
 
 .footer-nav_container ul:nth-child(3) {
     flex-grow: 2;
+} */
+
+@import url('../../../assets/styles/variables.css');
+
+.footer-nav_container {
+    display: flex;
+    padding: 4rem;
 }
+
+.footer-nav_logo-area {
+    flex-grow: 1;
+}
+.footer-nav_logo-area svg {
+    fill: var(--white);
+}
+
+.footer-nav_navigation-lists {
+    display: flex;
+    flex-grow: 2;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1000px) {
+    .footer-nav_container {
+        text-align: center;
+        flex-direction: column;
+    }
+    .footer-nav_navigation-lists {
+        flex-direction: column;
+    }
+    .footer-nav_logo-area {
+        flex-grow: 0;
+        align-self: center;
+    }
+}
+

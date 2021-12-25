@@ -20,3 +20,14 @@
     fill: var(--white);
 }
 
+@media screen and (max-width: 1000px) {
+    .social-media_items {
+        align-content: flex-end;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .social-media_items li {
+        margin: 0;
+    }
+}
+

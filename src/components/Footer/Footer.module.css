@@ -1,17 +1,17 @@
 .footer-wrapper {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    /* height: 100vh; */
     /* position: absolute; */
     /* width: 100%; */
     /* bottom: 5rem; */
 }
 
 .footer-wrapper header {
-    flex-basis: 50%;
+    /* flex-basis: 50%; */
 }
 
 .footer-wrapper nav {
     background-color: var(--very-dark-violet);
-    flex-basis: 50%;
+    /* flex-basis: 50%; */
 }

@@ -78,32 +78,8 @@ const companyMenu = [
     }
 ];
 
-const socialMediaMenu = [
-    {
-        id: '001',
-        title: 'Facebook',
-        to: '/'
-    },
-    {
-        id: '002',
-        title: 'Twitter',
-        to: '/'
-    },
-    {
-        id: '003',
-        title: 'Pinterest',
-        to: '/'
-    },
-    {
-        id: '004',
-        title: 'Instagram',
-        to: '/'
-    }
-];
-
 function FooterNav() {
     return (
-        <div className={styles['footer-flex']}>
         <nav className={styles['footer-nav_container']}>
                 <section className={styles['footer-nav_logo-area']}>
                     <LogoArea />
@@ -115,7 +91,6 @@ function FooterNav() {
                     <SocialMedia title="Social Media Links" aria-label="Shortly Social Media Menu" />
                 </section>
         </nav>
-        </div>
     );
 };
 
