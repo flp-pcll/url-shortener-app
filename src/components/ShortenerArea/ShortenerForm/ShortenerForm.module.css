@@ -7,7 +7,6 @@
     background-size: cover;
     background-position: top left;
 
-    margin: 0 4rem;
     position: relative;
 }
 
@@ -61,10 +60,11 @@
 }
 .error-message_alert {
     display: block;
+    font-style: italic;
     color: var(--red);
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 830px) {
     .shortener-form_card {
         background-image: url('../../../assets/images/bg-shorten-mobile.svg');
         background-repeat: no-repeat;

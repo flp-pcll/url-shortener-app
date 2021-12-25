@@ -8,12 +8,20 @@
 
 .stats-header p {
     color: var(--very-grayish-violet);
-    margin: 0 22rem;
     font-size: 1.2rem;
+    width: 50%;
+    margin: 0 auto;
 }
 
-@media screen and (max-width: 1220px) {
+@media screen and (max-width: 1000px) {
     .stats-header p {
-        margin:  0 18rem;
+        width: 80%;
     }
 }
+
+@media screen and (max-width: 650px) {
+    .stats-header p {
+        width: 100%;
+    }
+}
+

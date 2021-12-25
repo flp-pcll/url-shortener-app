@@ -7,7 +7,6 @@
 
 .top-navigation_container {
     display: flex;
-    /* align-content: center; */
 }
 
 .nav-content {
@@ -38,6 +37,8 @@
         flex-grow: 0;
     }
 }
+
+
 
 
 

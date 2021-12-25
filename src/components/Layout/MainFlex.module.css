@@ -1,8 +1,12 @@
 @import url('../../assets/styles/variables.css');
 .main-flex {
-    /* overflow: hidden; */
-    width: 100%;
     background-color: var(--main-area-gray);
     position: relative;
-    z-index: 100000;
+    padding: 0 4rem;
+}
+
+@media screen and (max-width: 1000px) {
+    .main-flex {
+        padding: 0 2rem;
+    }
 }

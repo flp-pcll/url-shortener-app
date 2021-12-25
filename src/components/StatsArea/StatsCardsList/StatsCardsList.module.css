@@ -1,7 +1,7 @@
 .stats-cards_list-area {
     display: flex;
     justify-content: space-between;
-    margin: 5rem 4rem 5rem 4rem;
+    margin: 5rem 0 5rem 0;
     height: 100%;
     position: relative;
 }

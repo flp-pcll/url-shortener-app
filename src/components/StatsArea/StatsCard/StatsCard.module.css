@@ -43,7 +43,6 @@
 .stats-card_text-area p {
     line-height: 1.8;
     font-size: .98rem;
-    /* text-justify:distribute-all-lines; */
     color: var(--very-grayish-violet);
 }
 

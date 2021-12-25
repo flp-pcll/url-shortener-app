@@ -18,9 +18,21 @@
         flex-direction: column-reverse;
         left: 0;
         text-align: center;
+        margin-bottom: 8rem;
     }
 
     .hero-area img {
         width: 100%
     }
+}
+
+@media screen and (max-width: 450px) {
+    .hero-area {
+        margin-bottom: 8rem;
+    }
+    .hero-area img {
+        width: 140%;
+        margin: 0 1rem;
+    }
+    
 }

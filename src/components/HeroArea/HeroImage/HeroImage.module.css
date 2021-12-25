@@ -6,3 +6,9 @@
     width: 123%;
     height: auto;
 }
+
+@media screen and (max-width: 1080px) {
+    .hero-img-area img {
+        width: 118%;
+    }
+}
