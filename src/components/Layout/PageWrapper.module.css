@@ -1,0 +1,7 @@
+@import url('../../assets/styles/variables.css');
+
+.page-wrapper {
+    padding: 0;
+    background-color: var(--main-area-gray);
+    position: relative;
+}

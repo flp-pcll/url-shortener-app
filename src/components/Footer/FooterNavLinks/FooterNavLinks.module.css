@@ -17,7 +17,11 @@
     font-weight: 500;
 }
 
-.footer-nav-links_list li:hover a {
+.footer-nav-links_list li a {
+    display: inline;
+}
+
+.footer-nav-links_list li a:hover {
     color: var(--cyan);
 }
 

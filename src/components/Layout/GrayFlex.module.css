@@ -1,6 +1,0 @@
-@import url('../../assets/styles/variables.css');
-
-.gray-bg_area {
-    background-color: var(--cyan);
-    margin-top: 120px;
-}
