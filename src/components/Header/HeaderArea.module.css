@@ -26,17 +26,6 @@
     fill: var(--very-dark-blue);
 }
 
-@media screen and (max-width: 1000px) {
-    .logo-area {
-        flex-grow: 1;
-        justify-content: flex-start;
-    }
-    .nav-content {
-        align-items: flex-end;
-        align-content: flex-end;
-        flex-grow: 0;
-    }
-}
 
 
 

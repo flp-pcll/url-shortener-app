@@ -5,8 +5,3 @@
     bottom: 5rem;
 }
 
-@media screen and (max-width: 830px) {
-    .shortener-area {
-        bottom: calc(208px / 2);
-    }
-}

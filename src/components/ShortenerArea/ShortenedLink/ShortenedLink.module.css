@@ -57,39 +57,3 @@
     position: relative;
     bottom: 15px;
 }
-
-@media screen and (max-width: 830px) {
-    .shortened-link_container {
-        height: 100%;
-    }
-    .shortened-link_container--card {
-        flex-direction: column;
-        padding: 1rem;
-    }
-    .shortened-link_links-area {
-        flex-direction: column;
-        align-items: flex-start;
-        align-content: stretch;
-        width: 100%;
-    }
-
-    .shortened-link_links-area span {
-        width: 100%;
-    }
-
-    .shortened-link__originalURL {
-        border-bottom: 1px solid var(--gray);
-        margin-bottom: .5rem;
-        padding-bottom: .5rem;
-    }
-
-    .shortened-link-area {
-        text-align: left;
-        margin-bottom: 1rem;
-    }
-
-    .shortened-link_controls-area {
-        width: 100%;
-        margin: 0;
-    }
-}
