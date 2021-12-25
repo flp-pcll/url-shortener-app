@@ -1,21 +1,24 @@
 import React, { useState, useEffect } from "react";
-import styles from "./HeaderArea.module.css";
+
 import LogoArea from "./LogoArea/LogoArea";
 import NavActions from "./NavActions/NavActions";
 import NavLinks from "./NavLinks/NavLinks";
 import MobileMenuIcon from "./MobileMenuIcon/MobileMenuIcon";
 
+import styles from "./HeaderArea.module.css";
+
+
 function Header() {
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [windowWidth, setWindowWidth] = useState(document.documentElement.clientWidth);
 
     useEffect(() => {
-        const windowResizeHandler = () => setWindowWidth(window.innerWidth);
+        const windowResizeHandler = () => setWindowWidth(document.documentElement.clientWidth);
         window.addEventListener('resize', windowResizeHandler);
         return () => window.removeEventListener('resize', windowResizeHandler);
     }, [windowWidth]);
 
 
-    console.log(windowWidth);
+    console.log(document.documentElement.clientWidth);
     return (
         <header className={styles['page-header_area']}>
             <nav className={styles['top-navigation_container']}>

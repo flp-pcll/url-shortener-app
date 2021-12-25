@@ -64,5 +64,24 @@
     color: var(--red);
 }
 
+@media screen and (max-width: 950px) {
+    .shortener-form {
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-around;
+        padding: 1rem 0;
+    }
+    .shortener-form_form-controls {
+        flex-grow: 0;
+        margin-right: 0;
+    }
+    .shortener-form_form-actions {
+        justify-self: stretch;
+    }
+    .shortener-form_form-actions button {
+        width: 100%;
+    }
+}
+
 
 

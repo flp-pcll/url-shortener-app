@@ -1,12 +1,11 @@
 @import url('../../../assets/styles/variables.css');
 .shortened-link_container {
-    height: 80px;
-    margin: .8rem 0;
+    margin: .5rem 0;
 }
 .shortened-link_container--card {
     background-color: var(--white);
     height: 100%;
-    padding: 0 1rem;
+    padding: 1rem;
 
     display: flex;
     align-items: center;
@@ -56,4 +55,31 @@
     height: 20px;
     position: relative;
     bottom: 15px;
+}
+
+@media screen and (max-width: 950px) {
+    
+    .shortened-link_container--card {
+        flex-direction: column;
+        align-items: stretch;
+        margin: 0;
+    }
+    .shortened-link_links-area {
+        margin-bottom: 1rem;
+        flex-direction: column;
+        text-align: left;
+    }
+    .shortened-link-area {
+        text-align: left;
+        padding: .5rem 0 0 0;
+    }
+    .shortened-link__originalURL {
+        padding: 0 0 .5rem 0;
+        border-bottom: 1px solid var(--main-area-gray);
+    }
+    .shortened-link_controls-area {
+        align-self: stretch;
+        width: 100%;
+        margin: 0;
+    }
 }
