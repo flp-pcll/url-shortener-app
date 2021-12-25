@@ -8,6 +8,7 @@
     background-position: top left;
 
     margin: 0 4rem;
+    position: relative;
 }
 
 .shortener-form {

@@ -1,6 +1,8 @@
+@import url('../../assets/styles/variables.css');
 .page-header_area {
     display: block;
-    margin: 2rem 4rem 0 4rem;
+    padding: 2rem 4rem 0 4rem;
+    background-color: var(--white);
 }
 
 .top-navigation_container {

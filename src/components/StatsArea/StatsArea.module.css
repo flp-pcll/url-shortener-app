@@ -3,7 +3,9 @@
 .stats-cards_area {
     background-color: var(--main-area-gray);
     text-align: center;
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
+    /* height: 100vh; */
+    /* margin-bottom: 10rem; */
 }
 
 @media screen and (max-width: 1000px) {

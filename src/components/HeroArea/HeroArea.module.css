@@ -1,6 +1,8 @@
 @import url('../../assets/styles/variables.css');
 .hero-area_section {
     overflow: hidden;
+    z-index: 1;
+    background-color: var(--white);
 }
 .hero-area {
     display: flex;
@@ -8,8 +10,7 @@
     align-items: center;
     position: relative;
     left: 4rem;
-    overflow: hidden;
-    margin: 2rem 0 2rem 0;
+    margin: 2rem 0 10rem 0;
 }
 
 @media screen and (max-width: 1000px) {
@@ -17,7 +18,6 @@
         flex-direction: column-reverse;
         left: 0;
         text-align: center;
-        /* margin: 0 2rem; */
     }
 
     .hero-area img {

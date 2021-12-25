@@ -1,6 +1,8 @@
 @import url('../../assets/styles/variables.css');
 .main-flex {
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 100%;
     background-color: var(--main-area-gray);
+    position: relative;
+    z-index: 100000;
 }

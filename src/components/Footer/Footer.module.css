@@ -5,10 +5,10 @@
 }
 
 .footer-wrapper header {
-    flex-basis: 40%;
+    flex-basis: 50%;
 }
 
 .footer-wrapper nav {
     background-color: var(--very-dark-violet);
-    flex-basis: 60%;
+    flex-basis: 50%;
 }
