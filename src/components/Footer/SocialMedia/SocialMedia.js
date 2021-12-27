@@ -32,7 +32,7 @@ const socialMediaMenu = [
 function SocialMedia(props) {
 
     return (
-        <FooterNavLinks className={styles['social-media_items']} links={socialMediaMenu} />
+        <FooterNavLinks className={`${styles['social-media_items']} ${props.className}`} links={socialMediaMenu} />
     );
 };
 

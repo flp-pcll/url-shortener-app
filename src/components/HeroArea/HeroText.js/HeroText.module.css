@@ -33,10 +33,12 @@
 @media screen and (max-width: 1000px) {
     .hero-text_container {
         margin: 2rem 4rem;
+        text-align: center;
     }
     .hero-text_container p {
-        margin: 0 4rem;
-        margin-bottom: 2rem;
+        /* margin: 0 4rem; */
+        margin: 1rem 8rem 1rem 8rem;
+        /* margin-bottom: 2rem; */
     }
 
     .hero-text_container__control button {

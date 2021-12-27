@@ -5,21 +5,22 @@ import MainFlex from "./components/Layout/MainFlex";
 import HeroArea from "./components/HeroArea/HeroArea";
 import ShortenerArea from "./components/ShortenerArea/ShortenerArea";
 import StatsArea from "./components/StatsArea/StatsArea";
-
-import "./App.css";
 import Footer from "./components/Footer/Footer";
+import "./App.css";
 
 function App() {
     return (
-        <PageWrapper>
-            <Header />
-            <HeroArea />
-            <MainFlex>
-                <ShortenerArea />
-                <StatsArea />
-            </MainFlex>
-            <Footer />
-        </PageWrapper>
+        <React.StrictMode>
+            <PageWrapper>
+                <Header />
+                <HeroArea />
+                <MainFlex>
+                    <ShortenerArea />
+                    <StatsArea />
+                </MainFlex>
+                <Footer />
+            </PageWrapper>
+        </React.StrictMode>
     );
 };
 

@@ -88,7 +88,7 @@ function FooterNav() {
                     <FooterNavLinks title="Shortly Features" aria-label="Shortly Features Menu" links={featuresMenu} />
                     <FooterNavLinks title="Shortly Resources" aria-label="Shortly Resources Menu" links={resourcesMenu} />
                     <FooterNavLinks title="Shortly Company" aria-label="Shorly Company Menu" links={companyMenu} />
-                    <SocialMedia title="Social Media Links" aria-label="Shortly Social Media Menu" />
+                    <SocialMedia className={styles['social-media']} title="Social Media Links" aria-label="Shortly Social Media Menu" />
                 </section>
         </nav>
     );

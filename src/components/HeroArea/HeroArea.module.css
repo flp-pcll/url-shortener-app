@@ -13,3 +13,20 @@
     margin: 2rem 0 10rem 0;
 }
 
+@media screen and (max-width: 1000px) {
+    .hero-area_section {
+        left: 0;
+    }
+    .hero-area {
+        flex-direction: column-reverse;
+        align-items: center;
+        align-content: center;
+        left: 0;
+    }
+
+    .hero-area img {
+        /* margin-left: 4rem; */
+        width: 100%;
+    }
+}
+
