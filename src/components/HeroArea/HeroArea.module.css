@@ -1,17 +1,19 @@
 @import url('../../assets/styles/variables.css');
-.hero-area_section {
-    overflow: hidden;
-    z-index: 1;
-    background-color: var(--white);
-}
-.hero-area {
-    display: flex;
-    align-content: center;
-    align-items: center;
-    position: relative;
-    left: 4rem;
-    margin: 2rem 0 10rem 0;
-}
+
+    .hero-area_section {
+        overflow: hidden;
+        z-index: 1;
+        background-color: var(--white);
+    }
+    .hero-area {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        position: relative;
+        left: 4rem;
+        margin: 2rem 0 10rem 0;
+    }
+
 
 @media screen and (max-width: 1000px) {
     .hero-area_section {
@@ -27,6 +29,19 @@
     .hero-area img {
         /* margin-left: 4rem; */
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 999px) {
+    .hero-area {
+        flex-direction: column-reverse;
+        margin: 1rem 0 8rem 0;
+        left: 0;
+    }
+
+    .hero-area img {
+        width: 140%;
+        margin-left: 1rem;
     }
 }
 

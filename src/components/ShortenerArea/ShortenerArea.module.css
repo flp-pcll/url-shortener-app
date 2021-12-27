@@ -10,3 +10,9 @@
         bottom: calc(192px/2);
     }
 }
+
+@media screen and (max-width: 949px) {
+    .shortener-area {
+        bottom: calc((12rem / 2));
+    }
+}

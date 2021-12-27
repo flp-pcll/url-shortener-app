@@ -10,3 +10,9 @@
         padding: 0 2rem;
     }
 }
+
+@media screen and (max-width: 999px) {
+    .main-flex {
+        padding: 0 .5rem;
+    }
+}
