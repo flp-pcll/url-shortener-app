@@ -6,7 +6,7 @@ import styles from "./ShortenedLink.module.css";
 
 function ShortenedLink(props) {
     const [copyURL, setCopyURL] = useState(false);
-    const [urlIsCopied, copyURLToClipboard] = useCopyToClipboard(props.shortenedURL)
+    const [urlIsCopied, copyURLToClipboard] = useCopyToClipboard(props.shortenedURL);
 
     const buttonClickHandler = event => {
         event.preventDefault();

@@ -6,12 +6,33 @@ import Card from "../../UI/Card/Card";
 
 import styles from "./ShortenerForm.module.css";
 import Spinner from "../../UI/Spinner/Spinner";
+import useHttpRequest from "../../../assets/hooks/use-http-request";
 
 function ShortenerForm({onHttpRequest}) {
-    const inputRef = useRef(null);
+    const inputRef = useRef('');
     const [isInputValid, setIsInputValid] = useState(false);
     const [dataIsLoading, setDataIsLoading] = useState(false);
     const [errorAlert, setErrorAlert] = useState(false);
+
+    const requestObj = {
+        url: `https://api.shrtco.de/v2/shorten?url=${inputRef.current.value}`,
+        body: null,
+        headers: {
+            'Content-type' : 'application/json'
+        }
+    };
+
+    function dataConvertion(data) {
+        onHttpRequest({
+            id: data.code,
+            originalURL: data.original_link,
+            shortenedURL: data.short_link
+        });
+        inputRef.current.value = null;
+        setDataIsLoading(false);
+    }
+
+    const makeRequest = useHttpRequest(requestObj, dataConvertion);
 
     const inputClickHandler = event => {
         event.preventDefault();
@@ -31,30 +52,34 @@ function ShortenerForm({onHttpRequest}) {
         };
     };
 
+
+
     //http request:
     useEffect(() => {
         if (!isInputValid) return;
+        makeRequest();
 
-        const url = `https://api.shrtco.de/v2/shorten?url=${inputRef.current.value}`;
-        const getShortenedLink = async (url) => {
-            try {
-                const request = await axios.get(url);
-                onHttpRequest({
-                    id: request.data.result.code,
-                    originalURL: request.data.result.original_link,
-                    shortenedURL: request.data.result.short_link
-                });
-                inputRef.current.value = null;
-                setDataIsLoading(false);
-            } catch(error) {
-                setDataIsLoading(false);
-                //Open error on request in a modal!
-                window.alert(`oops. Something went wrong! ${error.response.status}: ${error.response.statusText}`);
-            };
-        };
-        getShortenedLink(url);
+        // const url = `https://api.shrtco.de/v2/shorten?url=${inputRef.current.value}`;
+        // const getShortenedLink = async (url) => {
+        //     try {
+        //         const request = await axios.get(url);
+        //         onHttpRequest({
+        //             id: request.data.result.code,
+        //             originalURL: request.data.result.original_link,
+        //             shortenedURL: request.data.result.short_link
+        //         });
+        //         inputRef.current.value = null;
+        //         setDataIsLoading(false);
+        //     } catch(error) {
+        //         setDataIsLoading(false);
+        //         //Open error on request in a modal!
+        //         window.alert(`oops. Something went wrong! ${error.response.status}: ${error.response.statusText}`);
+        //     };
+        // };
+        // getShortenedLink(url);
+
         setIsInputValid(false);
-    }, [isInputValid, onHttpRequest]);
+    }, [isInputValid, makeRequest]);
 
     return (
         <Card className={styles['shortener-form_card']}>
