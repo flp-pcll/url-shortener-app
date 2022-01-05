@@ -16,12 +16,18 @@
 @media screen and (max-width: 1000px) {
     .stats-header p {
         width: 80%;
+        font-size: 1rem;
     }
 }
 
 @media screen and (max-width: 650px) {
     .stats-header p {
         width: 100%;
+        font-size: 1rem;
+    }
+
+    .stats-header h2 {
+        font-size: 1.8rem;
     }
 }
 

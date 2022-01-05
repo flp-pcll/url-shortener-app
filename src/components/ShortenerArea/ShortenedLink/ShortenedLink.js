@@ -1,26 +1,17 @@
 import React, { useState, useEffect, useCallback } from "react";
+import useCopyToClipboard from "../../../assets/hooks/use-copy-to-clipboard";
 import Button from "../../UI/Button/Button";
 import Card from "../../UI/Card/Card";
 import styles from "./ShortenedLink.module.css";
 
 function ShortenedLink(props) {
     const [copyURL, setCopyURL] = useState(false);
-    const [urlIsCopied, setUrlIsCopied] = useState(false);
+    const [urlIsCopied, copyURLToClipboard] = useCopyToClipboard(props.shortenedURL)
 
     const buttonClickHandler = event => {
         event.preventDefault();
         setCopyURL(true);
     };
-
-    const copyURLToClipboard = useCallback(async () => {
-        try {
-            await navigator.clipboard.writeText(props.shortenedURL);
-            console.log(`${props.shortenedURL} was coppied to the clipboard`);
-            setUrlIsCopied(true);
-        } catch (error) {
-            console.log(error);
-        }
-    }, [props.shortenedURL]);
 
     useEffect(() => {
         if(!copyURL) return;
