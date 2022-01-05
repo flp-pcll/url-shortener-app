@@ -9,6 +9,7 @@ function MobileMenuIcon(props) {
     const iconClickHandler = event => {
         event.preventDefault();
         setMenuIsClicked(prevState => !prevState);
+        props.onToggleMobileMenu();
     };
 
     return (

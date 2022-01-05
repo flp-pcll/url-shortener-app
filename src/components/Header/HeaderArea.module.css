@@ -26,6 +26,17 @@
     fill: var(--very-dark-blue);
 }
 
+.desktop-menu_links li {
+    margin-left: 2rem;
+}
+.desktop-menu_links li:nth-child(1) {
+    margin-left: .5rem;
+}
+
+.desktop-menu_actions li:nth-child(1) {
+    margin-right: .5rem;
+}
+
 
 
 

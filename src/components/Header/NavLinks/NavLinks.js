@@ -2,9 +2,9 @@ import React from "react";
 import Link from "../../UI/Link/Link";
 import styles from "./NavLinks.module.css";
 
-function NavLinks() {
+function NavLinks(props) {
     return(
-        <ul className={ styles['nav-links']} title="Navigation Links">
+        <ul className={ `${styles['nav-links']} ${props.className}` } title="Navigation Links">
             <li title="Navigation Link Item">
                 <Link href="/"> Features </Link>
             </li>

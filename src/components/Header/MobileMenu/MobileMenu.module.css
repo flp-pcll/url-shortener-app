@@ -1,0 +1,46 @@
+@import url('../../../assets/styles/variables.css');
+
+.mobile-menu-card {
+    background-color: var(--dark-violet);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* padding: 2rem 0; */
+}
+
+.mobile-menu-card ul {
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-content: center; */
+    padding: 1rem 0;
+}
+
+.mobile-menu-card .links-list {
+    margin: 0;
+    position: relative;
+}
+
+.mobile-menu-card .links-list::before {
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: 1px;
+    top: 100%;
+    background-color: var(--gray);
+}
+.links-list li,
+.nav-actions li {
+    margin: .5rem 0;
+}
+.links-list a,
+.nav-actions a {
+    color: var(--white);
+}
+
+.nav-actions {
+    margin: 0;
+}
+
+.nav-actions div {
+    width: 100%;
+}

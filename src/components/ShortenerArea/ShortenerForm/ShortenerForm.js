@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import axios from "axios";
 import Button from "../../UI/Button/Button";
 import Input from "../../UI/Input/Input";
 import Card from "../../UI/Card/Card";
@@ -52,32 +51,10 @@ function ShortenerForm({onHttpRequest}) {
         };
     };
 
-
-
     //http request:
     useEffect(() => {
         if (!isInputValid) return;
         makeRequest();
-
-        // const url = `https://api.shrtco.de/v2/shorten?url=${inputRef.current.value}`;
-        // const getShortenedLink = async (url) => {
-        //     try {
-        //         const request = await axios.get(url);
-        //         onHttpRequest({
-        //             id: request.data.result.code,
-        //             originalURL: request.data.result.original_link,
-        //             shortenedURL: request.data.result.short_link
-        //         });
-        //         inputRef.current.value = null;
-        //         setDataIsLoading(false);
-        //     } catch(error) {
-        //         setDataIsLoading(false);
-        //         //Open error on request in a modal!
-        //         window.alert(`oops. Something went wrong! ${error.response.status}: ${error.response.statusText}`);
-        //     };
-        // };
-        // getShortenedLink(url);
-
         setIsInputValid(false);
     }, [isInputValid, makeRequest]);
 

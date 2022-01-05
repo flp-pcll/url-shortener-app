@@ -3,10 +3,10 @@ import Button from "../../UI/Button/Button";
 import Link from "../../UI/Link/Link";
 import styles from "./NavActions.module.css";
 
-function NavActions() {
+function NavActions(props) {
 
     return(
-        <ul className={styles['nav-actions']} title="Navigation Action Items">
+        <ul className={`${styles['nav-actions']} ${props.className}`} title="Navigation Action Items">
             <li title="Login">
                 <Link href="/"> Login </Link>
             </li>

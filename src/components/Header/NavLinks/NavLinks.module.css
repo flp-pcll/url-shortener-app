@@ -3,9 +3,9 @@
     align-content: center;
     align-items: center;
     flex-grow: 1;
-    margin: 0 0 0 1.5rem;
+    /* margin: 0 0 0 1.5rem; */
 }
 
-.nav-links li:not(:nth-child(1)) {
+/* .nav-links li:not(:nth-child(1)) {
     margin-left: 2.5rem;
-}
+} */
