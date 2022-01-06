@@ -7,7 +7,7 @@ import styles from "./MobileMenu.module.css";
 
 function MobileMenu(props) {
     return (
-        <Card className={styles['mobile-menu-card']}>
+        <Card {...props} className={styles['mobile-menu-card']}>
             <Modal className={styles['mobile-menu-card']}>
                 <NavLinks className={styles['links-list']} />
                 <NavActions className={styles['nav-actions']} />

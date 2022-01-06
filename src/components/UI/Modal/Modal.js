@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Card from "../Card/Card";
 import styles from "./Modal.module.css";
 
 function Backdrop(props) {
@@ -9,9 +10,12 @@ function Backdrop(props) {
 };
 
 function ModalOverlay(props) {
+    const classes = props.isModalOpen ? `${styles['modal-open']} ${styles['modal-overlay']}` : `${styles['modal-overlay']}`;
     return(
-        <div className={`${styles['modal-overlay']} ${props.className}`} name="Modal Area">
+        <div className={`${classes} ${props.className}`} name="Modal Area">
+            <Card className={styles['modal-card']}>
             {props.children}
+            </Card>
         </div>
     );
 };

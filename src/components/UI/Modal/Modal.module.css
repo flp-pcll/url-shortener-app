@@ -13,11 +13,21 @@
 
 .modal-overlay {
     position: fixed;
-    width: 40%;
-    top: 10%;
-    /* left: 50%; */
-    /* background-color: red; */
+    width: calc(100% - 8rem);
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 2000;
+    margin: 0 auto;
 
+    border-radius: 10px;
+}
+
+.modal-open {
+    top: 10%;
+    transition: all 1s;
+}
+
+.modal-card {
     border-radius: 10px;
 }

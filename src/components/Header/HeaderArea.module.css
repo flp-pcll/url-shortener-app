@@ -37,6 +37,19 @@
     margin-right: .5rem;
 }
 
+@media screen and (max-width: 1000px) {
+    .nav-content {
+        flex-grow: 0;
+
+    }
+    .logo-area{
+        flex-grow: 2;
+        align-content: flex-start;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+}
+
 
 
 
