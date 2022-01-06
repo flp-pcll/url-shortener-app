@@ -3,6 +3,7 @@
     background-color: var(--main-area-gray);
     position: relative;
     padding: 0 4rem;
+    top: 4rem;
 }
 
 @media screen and (max-width: 1000px) {

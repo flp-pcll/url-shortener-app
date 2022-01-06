@@ -41,17 +41,30 @@
     .page-header_area {
         padding: 2rem 1.2rem 0 1.2rem;
     }
-    .page-header_area__fix {
+    /* .page-header_area__fix {
         position: fixed;
         top: 0;
         bottom: 0;
         width: 100%;
         z-index: 1500;
         padding: 2rem 1.2rem 0 1.2rem;
-        background-color: transparent;
+        background-color: transparent; 
+    } 
+    */
+
+    .page-header_area__fix {
+        position: fixed;
+        width: 100%;
+        padding: 2rem 1.2rem 0 1.2rem;
+        top: 0;
+        bottom:0;
+        /* background-color:  hsl(255, 11%, 22%, .5); */
+        z-index: 1500;
     }
+    
     .nav-content {
         flex-grow: 0;
+        /* z-index: 3000; */
 
     }
     .logo-area{
