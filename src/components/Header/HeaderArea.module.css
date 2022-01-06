@@ -38,6 +38,18 @@
 }
 
 @media screen and (max-width: 1000px) {
+    .page-header_area {
+        padding: 2rem 1.2rem 0 1.2rem;
+    }
+    .page-header_area__fix {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 1500;
+        padding: 2rem 1.2rem 0 1.2rem;
+        background-color: transparent;
+    }
     .nav-content {
         flex-grow: 0;
 

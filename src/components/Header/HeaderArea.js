@@ -27,7 +27,7 @@ function Header() {
 
     console.log(document.documentElement.clientWidth);
     return (
-        <header className={styles['page-header_area']}>
+        <header className={`${styles['page-header_area']} ${isModalOpen && styles['page-header_area__fix']}`}>
             { isModalOpen && <MobileMenu isModalOpen={isModalOpen}></MobileMenu>}
             <nav className={styles['top-navigation_container']}>
                 <section className={styles['logo-area']} id="logoArea" title="Shortly Logo Area">
